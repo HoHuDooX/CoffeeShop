@@ -10,6 +10,10 @@ body {
   justify-content: center;
   height: 100vh;
 }
+::selection {
+  color: #9b5d27;
+  background-color: antiquewhite;
+}
 * {
   margin-top: 0;
   margin-left: 0;
