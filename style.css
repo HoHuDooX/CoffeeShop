@@ -70,9 +70,10 @@ input[type="password"] {
 }
 label {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--white-color);
   margin-left: 2rem;
+  font-weight: 400;
 }
 .button {
   display: flex;
@@ -115,6 +116,8 @@ form + p {
 p a {
   text-decoration: none;
   color: var(--acolor);
+  font-weight: 500;
+  margin-left: 1rem;
 }
 .form .check {
   color: var(--white-color);
