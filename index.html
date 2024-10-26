@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>CoffeeShop</title>
   </head>
-  <body></body>
+  <body>
+    <div class="background-overlay"></div>
+    <div class="form-login">
+      <h1>Đăng Nhập</h1>
+      <div class="form">
+        <form id="loginForm">
+          <div class="box">
+            <label for="maquanli">Mã quản lý</label>
+            <input
+              type="text"
+              id="maquanli"
+              placeholder=""
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="box">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" placeholder="" required />
+            <i class="fa fa-eye toggle-password" id="togglePassword"></i>
+          </div>
+          <div class="check">
+            <input type="checkbox" name="" id="" /> <span>Lưu mật khẩu</span>
+            <a href="#">Quên mật khẩu?</a>
+          </div>
+          <div class="button"><button type="submit">Đăng Nhập</button></div>
+          <p id="message"></p>
+        </form>
+        <p>Bạn chưa có tài khoản? <a href="#">Đăng Kí</a></p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
