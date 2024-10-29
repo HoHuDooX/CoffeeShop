@@ -206,7 +206,7 @@ body {
 }
 
 .sidebar.active {
-  width: 240px;
+  width: 15rem;
 }
 .sidebar.active .logo_content .logo {
   opacity: 1;
