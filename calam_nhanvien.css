@@ -4,7 +4,7 @@
   background-color: #fff;
   height: 100%;
   width: calc(100% - 76px);
-  left: 76px;
+  left: 4.75rem;
   transition: all 0.5s ease;
 }
 
@@ -289,8 +289,8 @@
   position: absolute;
   background-color: #f5f5f5;
   height: 100vh;
-  width: calc(100% - 78px);
-  left: 78px;
+  width: calc(100% - 76px);
+  left: 4.75rem;
   transition: all 0.5s ease;
   padding: 20px;
   overflow-y: auto;
@@ -344,6 +344,7 @@
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 .home_content_qlcalam .list-header {
@@ -435,5 +436,73 @@
 
   .home_content_qlcalam .filter-section {
     flex-direction: column;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Định dạng cho nút */
+button {
+  padding: 6px 10px;
+  background-color: #4caf50; /* Màu xanh cho nút sửa */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px; /* Khoảng cách giữa các nút */
+}
+
+button:hover {
+  background-color: #45a049; /* Hiệu ứng hover */
+}
+
+.btn-delete-row {
+  background-color: #f44336; /* Màu đỏ cho nút xóa */
+}
+
+.btn-delete-row:hover {
+  background-color: #d32f2f; /* Hiệu ứng hover cho nút xóa */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 480px) {
+  .shift-list table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .shift-list table thead {
+    display: none;
+  }
+
+  .shift-list tbody,
+  .shift-list tr {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .shift-list td {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+
+  .shift-list td::before {
+    content: attr(
+      data-label
+    ); /* Sử dụng thuộc tính data-label để hiển thị tên cột */
+    font-weight: bold;
+    margin-right: 10px; /* Khoảng cách giữa tên cột và giá trị */
   }
 }

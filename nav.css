@@ -5,20 +5,22 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+:root {
+  --bgc: #272725c8;
+}
 body {
   position: relative;
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(to right, #5a5e64, rgb(180, 169, 142));
+  background: linear-gradient(to bottom, rgb(89, 82, 69), rgb(248, 244, 209));
 }
 .sidebar {
   position: fixed;
-  width: 78px;
+  width: 77px;
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(to top right, rgb(84, 63, 12), #5a5e64);
   padding: 6px 14px;
   transition: all 0.5s ease;
 }
