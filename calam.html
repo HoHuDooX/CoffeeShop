@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nav.css" />
+
+    <link rel="stylesheet" href="./calam_nhanvien.css" />
+    <title>CoffeeShop</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bx-coffee"></i>
+          <div class="logo_name">CoffeeShop</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="dashboard.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Thống kê</span>
+          </a>
+          <span class="tooltip">Thống kê</span>
+        </li>
+        <li>
+          <a href="menu.html">
+            <i class="bx bx-food-menu"></i>
+            <span class="links_name">QL Thực đơn</span>
+          </a>
+          <span class="tooltip">QL Thực đơn</span>
+        </li>
+        <li>
+          <a href="nhanvien.html">
+            <i class="bx bxs-group"></i>
+            <span class="links_name">QL Nhân viên</span>
+          </a>
+          <span class="tooltip">QL Nhân Viên</span>
+        </li>
+        <li>
+          <a
+            href="calam.html"
+            style="
+              color: #000;
+              font-weight: 600;
+              background: rgba(255, 255, 255, 0.25);
+            "
+          >
+            <i class="bx bx-task"></i>
+            <span class="links_name">QL Ca làm</span>
+          </a>
+          <span class="tooltip">QL Ca làm</span>
+        </li>
+      </ul>
+
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="./img/profile.jpg" alt="" />
+            <div class="name_job">
+              <div class="name">Username</div>
+              <div class="job">Quản lí</div>
+            </div>
+          </div>
+          <i
+            class="bx bx-log-out"
+            id="log_out"
+            onclick="window.location.href='index.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <div class="home_content_qlcalam">
+      <div class="shift-management">
+        <!-- Form nhập thông tin ca làm -->
+        <div class="shift-form">
+          <h2>Thông tin ca làm</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="shiftId">Mã ca làm</label>
+              <input type="text" id="shiftId" placeholder="Nhập mã ca làm" />
+            </div>
+            <div class="form-group">
+              <label for="shiftName">Tên ca làm</label>
+              <select id="shiftName">
+                <option value="">Chọn ca làm</option>
+                <option value="Ca sáng">Ca sáng</option>
+                <option value="Ca chiều">Ca chiều</option>
+                <option value="Ca tối">Ca tối</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="employeeId">Mã nhân viên</label>
+              <input
+                type="text"
+                id="employeeId"
+                placeholder="Nhập mã nhân viên"
+              />
+            </div>
+            <div class="form-group">
+              <label for="employeeName">Tên nhân viên</label>
+              <input
+                type="text"
+                id="employeeName"
+                placeholder="Nhập tên nhân viên"
+              />
+            </div>
+            <div class="form-group">
+              <label for="workDate">Ngày làm</label>
+              <input type="date" id="workDate" />
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="saveShift()">
+            Lưu ca làm
+          </button>
+          <!-- Phần filter và bảng -->
+          <div class="shift-list">
+            <div class="list-header">
+              <h2>Danh sách ca làm</h2>
+              <div class="filter-section">
+                <div class="form-group">
+                  <select id="monthFilter" onchange="filterShifts()">
+                    <option value="">Tất cả tháng</option>
+                    <option value="1">Tháng 1</option>
+                    <option value="2">Tháng 2</option>
+                    <option value="3">Tháng 3</option>
+                    <option value="4">Tháng 4</option>
+                    <option value="5">Tháng 5</option>
+                    <option value="6">Tháng 6</option>
+                    <option value="7">Tháng 7</option>
+                    <option value="8">Tháng 8</option>
+                    <option value="9">Tháng 9</option>
+                    <option value="10">Tháng 10</option>
+                    <option value="11">Tháng 11</option>
+                    <option value="12">Tháng 12</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select id="shiftFilter" onchange="filterShifts()">
+                    <option value="">Tất cả ca</option>
+                    <option value="Ca sáng">Ca sáng</option>
+                    <option value="Ca chiều">Ca chiều</option>
+                    <option value="Ca tối">Ca tối</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Mã ca làm</th>
+                  <th>Tên ca</th>
+                  <th>Mã NV</th>
+                  <th>Tên NV</th>
+                  <th>Ngày làm</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="shiftTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./calam_nhanvien.js"></script>
+  </body>
+</html>

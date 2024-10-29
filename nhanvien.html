@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="calam_nhanvien.css" />
+    <title>CoffeeShop</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bx-coffee"></i>
+          <div class="logo_name">CoffeeShop</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="dashboard.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Thống kê</span>
+          </a>
+          <span class="tooltip">Thống kê</span>
+        </li>
+        <li>
+          <a href="menu.html">
+            <i class="bx bx-food-menu"></i>
+            <span class="links_name">QL Thực đơn</span>
+          </a>
+          <span class="tooltip">QL Thực đơn</span>
+        </li>
+        <li>
+          <a
+            href="nhanvien.html"
+            style="
+              color: #000;
+              font-weight: 600;
+              background: rgba(255, 255, 255, 0.25);
+            "
+          >
+            <i class="bx bxs-group"></i>
+            <span class="links_name">QL Nhân viên</span>
+          </a>
+          <span class="tooltip">QL Nhân Viên</span>
+        </li>
+        <li>
+          <a href="calam.html">
+            <i class="bx bx-task"></i>
+            <span class="links_name">QL Ca làm</span>
+          </a>
+          <span class="tooltip">QL Ca làm</span>
+        </li>
+      </ul>
+
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="./img/profile.jpg" alt="" />
+            <div class="name_job">
+              <div class="name">Username</div>
+              <div class="job">Quản lí</div>
+            </div>
+          </div>
+          <i
+            class="bx bx-log-out"
+            id="log_out"
+            onclick="window.location.href='index.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div class="home_content_qlnhanvien">
+      <div class="text">Quản lí Nhân viên</div>
+
+      <div class="nhanvien_container">
+        <div class="form_section">
+          <h3>Thông tin nhân viên</h3>
+          <form id="employee_form">
+            <div class="form_group">
+              <label for="manv">Mã nhân viên:</label>
+              <input type="text" id="manv" required />
+            </div>
+
+            <div class="form_group">
+              <label for="hoten">Họ tên:</label>
+              <input type="text" id="hoten" required />
+            </div>
+
+            <div class="form_group">
+              <label for="dienthoai">Điện thoại:</label>
+              <input type="tel" id="dienthoai" required />
+            </div>
+
+            <div class="form_group">
+              <label>Giới tính:</label>
+              <div style="display: flex; gap: 20px">
+                <label>
+                  <input type="radio" name="gioitinh" value="Nam" checked /> Nam
+                </label>
+                <label>
+                  <input type="radio" name="gioitinh" value="Nữ" /> Nữ
+                </label>
+              </div>
+            </div>
+
+            <div class="form_group">
+              <label for="diachi">Địa chỉ:</label>
+              <textarea id="diachi" rows="2"></textarea>
+            </div>
+
+            <div class="form_group">
+              <label for="chucvu">Chức vụ:</label>
+              <select id="chucvu">
+                <option value="Nhân viên">Nhân viên</option>
+                <option value="Quản lý">Quản lý</option>
+                <option value="Thu ngân">Thu ngân</option>
+                <option value="Pha chế">Pha chế</option>
+              </select>
+            </div>
+
+            <div class="form_group">
+              <label for="ngaysinh">Ngày sinh:</label>
+              <input type="date" id="ngaysinh" required />
+            </div>
+
+            <div class="form_group">
+              <label for="ngayvaolam">Ngày vào làm:</label>
+              <input type="date" id="ngayvaolam" required />
+            </div>
+
+            <div class="button_group">
+              <button type="submit" class="btn btn_add">Thêm</button>
+              <button type="button" class="btn btn_edit" disabled>Sửa</button>
+              <button type="button" class="btn btn_delete" disabled>Xóa</button>
+              <button type="reset" class="btn btn_reset">Làm mới</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="table_section">
+          <h3>Danh sách nhân viên</h3>
+          <table id="employee_table">
+            <thead>
+              <tr>
+                <th>Mã NV</th>
+                <th>Họ tên</th>
+                <th>Giới tính</th>
+                <th>Điện thoại</th>
+                <th>Chức vụ</th>
+                <th>Ngày sinh</th>
+                <th>Ngày vào làm</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./calam_nhanvien.js"></script>
+  </body>
+</html>
