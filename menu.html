@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"    
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="menu_dashboard.css">
+    <title>CoffeeShopr</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bx-coffee"></i>
+          <div class="logo_name">CoffeeShop</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="index.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Thống kê</span>
+          </a>
+          <span class="tooltip">Thống kê</span>
+        </li>
+        <li>
+          <a href="menu.html">
+            <i class="bx bx-food-menu"></i>
+            <span class="links_name">QL Thực đơn</span>
+          </a>
+          <span class="tooltip">QL Thực đơn</span>
+        </li>
+        <li>
+          <a href="nhanvien.html">
+            <i class="bx bxs-group"></i>
+            <span class="links_name">QL Nhân viên</span>
+          </a>
+          <span class="tooltip">QL Nhân Viên</span>
+        </li>
+        <li>
+          <a href="calam.html">
+            <i class="bx bx-task"></i>
+            <span class="links_name">QL Ca làm</span>
+          </a>
+          <span class="tooltip">QL Ca làm</span>
+        </li>
+        <li>
+          <a href="caidat.html">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Cài đặt</span>
+          </a>
+          <span class="tooltip">Cài đặt</span>
+        </li>
+      </ul>
+  
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="./img/profile.jpg" alt="" />
+            <div class="name_job">
+              <div class="name">Username</div>
+              <div class="job">Quản lí</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </div>
+      </div>
+    </div>
+  
+    <div class="home_content">
+      <div class="text">Quản lí Thực đơn</div>
+      
+      <!-- Form thông tin chi tiết -->
+      <div class="detail-form">
+        <h3>Thông tin chi tiết món</h3>
+        <div class="form-group">
+          <label>Mã món:</label>
+          <input type="text" id="maMon" placeholder="Nhập mã món">
+        </div>
+        <div class="form-group">
+          <label>Tên món:</label>
+          <input type="text" id="tenMon" placeholder="Nhập tên món">
+        </div>
+        <div class="form-group">
+          <label>Đơn giá:</label>
+          <input type="number" id="donGia" placeholder="Nhập đơn giá">
+        </div>
+        <div class="form-group">
+          <label>Danh mục:</label>
+          <select id="danhMuc">
+            <option value="">Chọn danh mục</option>
+            <option value="cafe">Cà phê</option>
+            <option value="tra">Trà</option>
+            <option value="banh">Bánh</option>
+            <option value="nuocep">Nước ép</option>
+          </select>
+        </div>
+        <div class="button-group">
+          <button class="btn-add" onclick="themMon()">Thêm món</button>
+          <button class="btn-edit" onclick="suaMon()">Chỉnh sửa</button>
+          <button class="btn-delete" onclick="xoaMon()">Xóa món</button>
+        </div>
+      </div>
+  
+      <!-- Bảng danh sách -->
+      <div class="list-table">
+        <h3>Danh sách món</h3>
+        <div class="filter-group">
+          <input type="text" id="filterMa" placeholder="Lọc theo mã món" onkeyup="filterTable()">
+          <input type="text" id="filterTen" placeholder="Lọc theo tên món" onkeyup="filterTable()">
+          <input type="number" id="filterGia" placeholder="Lọc theo đơn giá" onkeyup="filterTable()">
+          <select id="filterDanhMuc" onchange="filterTable()">
+            <option value="">Tất cả danh mục</option>
+            <option value="cafe">Cà phê</option>
+            <option value="tra">Trà</option>
+            <option value="banh">Bánh</option>
+            <option value="nuocep">Nước ép</option>
+          </select>
+        </div>
+        <table id="menuTable">
+          <thead>
+            <tr>
+              <th>Mã món</th>
+              <th>Tên món</th>
+              <th>Đơn giá</th>
+              <th>Danh mục</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dữ liệu mẫu -->
+            <tr>
+              <td>CF001</td>
+              <td>Cà phê đen</td>
+              <td>25000</td>
+              <td>Cà phê</td>
+              <td>
+                <button class="btn-edit-row" onclick="chonDongChinhSua(this)">
+                  <i class='bx bx-edit'></i>
+                </button>
+                <button class="btn-delete-row" onclick="xoaDong(this)">
+                  <i class='bx bx-trash'></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+    <script src="menu_dashboard.js"></script>
+  </body>
+
+</html>
