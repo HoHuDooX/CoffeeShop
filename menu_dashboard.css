@@ -183,3 +183,57 @@ button:hover {
     margin-bottom: 0; /* Không thêm margin cho thẻ cuối cùng */
   }
 }
+@media (max-width: 768px) {
+  .list-table table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .list-table table thead {
+    display: none; /* Ẩn tiêu đề bảng */
+  }
+
+  .list-table tbody,
+  .list-table tr {
+    display: block;
+    margin-bottom: 1rem; /* Khoảng cách giữa các hàng */
+  }
+
+  .list-table td {
+    display: flex;
+    justify-content: space-between; /* Căn chỉnh các ô bên trong hàng */
+    border: none;
+    padding: 10px;
+    background: #f9f9f9; /* Nền ô */
+  }
+
+  .list-table td:nth-child(1)::before {
+    content: "Mã món"; /* Hiển thị tiêu đề cho ô đầu tiên */
+    font-weight: bold;
+    margin-right: 0.6rem;
+  }
+
+  .list-table td:nth-child(2)::before {
+    content: "Tên món"; /* Tiêu đề cho ô thứ hai */
+    font-weight: bold;
+    margin-right: 0.6rem;
+  }
+
+  .list-table td:nth-child(3)::before {
+    content: "Đơn giá"; /* Tiêu đề cho ô thứ ba */
+    font-weight: bold;
+    margin-right: 0.6rem;
+  }
+
+  .list-table td:nth-child(4)::before {
+    content: "Danh mục"; /* Tiêu đề cho ô thứ tư */
+    font-weight: bold;
+    margin-right: 0.6rem;
+  }
+
+  .list-table td:nth-child(5)::before {
+    content: "Thao tác"; /* Tiêu đề cho ô thứ năm */
+    font-weight: bold;
+    margin-right: 0.6rem;
+  }
+}
