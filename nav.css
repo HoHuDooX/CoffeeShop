@@ -161,6 +161,7 @@ body {
   text-align: center;
   transition: all 0.4s ease;
   background: linear-gradient(to right, #c7b7c07a, #433f10);
+  cursor: pointer;
 }
 
 .home_content {
@@ -239,6 +240,7 @@ body {
 }
 .sidebar.active .profile #log_out {
   left: 88%;
+  cursor: pointer;
 }
 .sidebar.active ~ .home_content {
   width: calc(100% - 240px);
