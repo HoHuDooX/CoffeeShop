@@ -99,7 +99,7 @@ body {
   border-radius: 12px;
   border: none;
   outline: none;
-  background: linear-gradient(to right, #c7b7c07a, #7a7973);
+  background: linear-gradient(to right, #7fc8e27a, #ebd6eb);
   padding-left: 50px;
   font-size: 18px;
   color: #1f1e25;
@@ -163,7 +163,7 @@ body {
   border-radius: 12px;
   text-align: center;
   transition: all 0.4s ease;
-  background: linear-gradient(to right, #c7b7c07a, #7a7973);
+  background: linear-gradient(to right, #7fc8e27a, #ebd6eb);
   cursor: pointer;
 }
 
@@ -251,7 +251,7 @@ body {
 }
 
 .sidebar.active .profile_content .profile {
-  background: linear-gradient(to right, #c7b7c07a, #7a7973);
+  background: linear-gradient(to right, #7fc8e27a, #ebd6eb);
 }
 .sidebar.active .profile #log_out {
   background: none;

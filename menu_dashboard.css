@@ -3,8 +3,8 @@
 /* Thêm style cho container chung */
 .detail-form {
   background: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 2rem;
+  border-radius: 0.8rem;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 2px solid #000;
