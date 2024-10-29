@@ -49,7 +49,7 @@ html {
   transition: 1s;
 }
 .form-login:hover {
-  transform: scale(1.06);
+  transform: scale(0.95);
 }
 
 h1 {
@@ -162,4 +162,12 @@ p a:hover {
   .form-login {
     transform: scale(0.8);
   }
+}
+#message {
+  color: rgb(197, 93, 93);
+  text-align: center;
+}
+input::placeholder {
+  color: rgba(191, 190, 190, 0.334);
+  opacity: 1;
 }

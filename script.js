@@ -4,13 +4,17 @@ document
     event.preventDefault();
     const username = document.getElementById("maquanli").value;
     const password = document.getElementById("password").value;
-    if (username === "admin" && password === "123456") {
+    const usernamePattern = /^[a-zA-Z0-9._]{4,20}$/;
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    if (usernamePattern.test(username) && passwordPattern.test(password)) {
       window.location.href = "dashboard.html";
     } else {
       document.getElementById("message").innerText =
-        "Tên người dùng hoặc mật khẩu không đúng!";
+        "*Tên người dùng hoặc mật khẩu không đúng!";
     }
   });
+
 document
   .getElementById("togglePassword")
   .addEventListener("click", function () {
