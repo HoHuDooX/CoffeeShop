@@ -1,3 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, #5a5e64, rgb(180, 169, 142));
+}
+.sidebar {
+  position: fixed;
+  width: 78px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top right, rgb(84, 63, 12), #5a5e64);
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+}
+
+.sidebar .logo_content .logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  color: #1f1e25;
+
+  opacity: 0;
+  pointer-events: none;
+}
+.logo_content .logo i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+.logo_content .logo .logo_name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sidebar #btn {
+  position: absolute;
+  color: #17161d;
+  left: 50%;
+  top: 6px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+
+.sidebar ul {
+  margin-top: 20px;
+}
+.sidebar ul li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+}
+.sidebar ul li a {
+  color: #d9d1ff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all 0.2s ease-in;
+  white-space: nowrap;
+}
+
+.sidebar ul li i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+.sidebar ul li a:hover {
+  color: #000;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.25);
+}
+.sidebar ul li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #c7b7c07a, #423d07);
+  padding-left: 50px;
+  font-size: 18px;
+  color: #1f1e25;
+}
+
+.sidebar ul li .bx-search {
+  position: absolute;
+  z-index: 99;
+  color: #d9d1ff;
+  font-size: 22px;
+  transition: all 0.5s ease-in;
+}
+
+/* Profile Content */
+
+.sidebar .profile_content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #1f1e25;
+  width: 100%;
+}
+.sidebar .profile_content .profile {
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: none;
+  transition: all 0.4s ease-in;
+}
+.profile_content .profile .profile_details {
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+.profile_details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.profile .profile_details .name_job {
+  margin-left: 15px;
+}
+.profile .profile_details .name {
+  font-size: 15px;
+  font-weight: 400;
+}
+.profile .profile_details .job {
+  font-size: 12px;
+}
+
+.profile #log_out {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: linear-gradient(to right, #c7b7c07a, #433f10);
+}
+
+.home_content {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 76px);
+  left: 76px;
+  transition: all 0.5s ease;
+}
+.home_content .text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #1f1e25;
+  margin: 12px;
+}
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 122px;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 122px;
+  background: rgba(255, 255, 255, 0.4);
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+.sidebar ul li:hover .tooltip {
+  transition: all 0.3s ease;
+  top: 50%;
+  opacity: 1;
+}
+
+.sidebar.active {
+  width: 240px;
+}
+.sidebar.active .logo_content .logo {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.sidebar.active #btn {
+  left: 90%;
+}
+.sidebar ul li .bx-search:hover {
+  background: #fff;
+  color: #1f1e25;
+}
+
+.sidebar.active ul li .tooltip {
+  display: none;
+}
+.sidebar .links_name {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.sidebar.active .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar.active .profile .profile_details {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar.active .profile #log_out {
+  left: 88%;
+}
+.sidebar.active ~ .home_content {
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+.sidebar.active .profile_content .profile {
+  background: linear-gradient(to right, #9869127a, #969664);
+}
+.sidebar.active .profile #log_out {
+  background: none;
+}
+.logo_content .bx-menu:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 /* quan li nhan vien */
 .home_content_qlnhanvien {
   position: absolute;
@@ -27,10 +287,10 @@
   flex: 0 0 380px;
   background: #f5f5f5;
   padding: 15px;
-  border-radius: 1rem;
-  border: 2px solid rgb(0, 0, 0);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  height: 80vh;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 90vh;
   overflow-y: auto;
 }
 
@@ -38,10 +298,10 @@
   flex: 1;
   background: #f5f5f5;
   padding: 15px;
-  border-radius: 1rem;
+  border-radius: 8px;
   border: 2px solid black;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  height: 80vh;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 90vh;
   overflow-y: auto;
 }
 
@@ -95,22 +355,10 @@
   transition: all 0.3s ease;
 }
 
-.btn_add {
-  background: #4caf50;
-  color: white;
-}
-.btn_edit {
-  background: #2196f3;
-  color: white;
-}
-.btn_delete {
-  background: #f44336;
-  color: white;
-}
-.btn_reset {
-  background: #757575;
-  color: white;
-}
+.btn_add { background: #4CAF50; color: white; }
+.btn_edit { background: #2196F3; color: white; }
+.btn_delete { background: #f44336; color: white; }
+.btn_reset { background: #757575; color: white; }
 
 .btn:hover {
   opacity: 0.9;
@@ -231,7 +479,7 @@
   background: rgba(255, 255, 255, 0.4);
   line-height: 35px;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   transition: 0s;
   opacity: 0;
   pointer-events: none;
@@ -247,18 +495,18 @@
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .nhanvien_container {
-    flex-direction: column;
+      flex-direction: column;
   }
-
+  
   .form_section {
-    flex: none;
-    height: auto;
-    max-height: 50vh;
+      flex: none;
+      height: auto;
+      max-height: 50vh;
   }
-
+  
   .table_section {
-    height: auto;
-    max-height: 40vh;
+      height: auto;
+      max-height: 40vh;
   }
 }
 
@@ -282,9 +530,17 @@
 .form_group select:focus,
 .form_group textarea:focus {
   outline: none;
-  border-color: #2196f3;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-color: #2196F3;
+  box-shadow: 0 0 3px rgba(33, 150, 243, 0.3);
 }
+
+
+
+
+
+
+
+
 
 /* quản lí ca làm */
 .home_content_qlcalam {
@@ -307,7 +563,7 @@
   background: white;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   margin-bottom: 30px;
 }
 
@@ -345,7 +601,7 @@
   background: white;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .home_content_qlcalam .list-header {
@@ -393,7 +649,7 @@
 }
 
 .home_content_qlcalam .btn-primary {
-  background: #4caf50;
+  background: #4CAF50;
   color: white;
 }
 
@@ -402,12 +658,12 @@
 }
 
 .home_content_qlcalam .btn-edit {
-  background: #2196f3;
+  background: #2196F3;
   color: white;
 }
 
 .home_content_qlcalam .btn-edit:hover {
-  background: #1976d2;
+  background: #1976D2;
 }
 
 .home_content_qlcalam .btn-delete {
@@ -431,11 +687,11 @@
 
 @media (max-width: 768px) {
   .home_content_qlcalam .form-row {
-    flex-direction: column;
-    gap: 15px;
+      flex-direction: column;
+      gap: 15px;
   }
-
+  
   .home_content_qlcalam .filter-section {
-    flex-direction: column;
+      flex-direction: column;
   }
 }
