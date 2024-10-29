@@ -10,6 +10,7 @@ searchBtn.onclick = function () {
   sidebar.classList.toggle("active");
 };
 
+// Dữ liệu mẫu cho ca làm
 let shifts = [
   {
     id: "CA001",
@@ -27,6 +28,7 @@ let shifts = [
   },
 ];
 
+// Hiển thị danh sách ca làm
 function displayShifts(shiftsToDisplay = shifts) {
   const tableBody = document.getElementById("shiftTableBody");
   tableBody.innerHTML = "";
@@ -48,6 +50,7 @@ function displayShifts(shiftsToDisplay = shifts) {
   });
 }
 
+// Lưu ca làm
 function saveShift() {
   const shiftId = document.getElementById("shiftId").value;
   const shiftName = document.getElementById("shiftName").value;
@@ -79,6 +82,7 @@ function saveShift() {
   clearForm();
 }
 
+// Xóa ca làm
 function deleteShiftById(id) {
   if (confirm("Bạn có chắc muốn xóa ca làm này?")) {
     shifts = shifts.filter((shift) => shift.id !== id);
@@ -86,6 +90,7 @@ function deleteShiftById(id) {
   }
 }
 
+// Load thông tin để sửa
 function loadShiftForEdit(id) {
   const shift = shifts.find((shift) => shift.id === id);
   if (shift) {
@@ -97,6 +102,7 @@ function loadShiftForEdit(id) {
   }
 }
 
+// Xóa form
 function clearForm() {
   document.getElementById("shiftId").value = "";
   document.getElementById("shiftName").value = "";
@@ -105,6 +111,7 @@ function clearForm() {
   document.getElementById("workDate").value = "";
 }
 
+// Lọc ca làm
 function filterShifts() {
   const monthFilter = document.getElementById("monthFilter").value;
   const shiftFilter = document.getElementById("shiftFilter").value;
@@ -127,9 +134,11 @@ function filterShifts() {
   displayShifts(filteredShifts);
 }
 
+// Khởi tạo hiển thị ban đầu
 document.addEventListener("DOMContentLoaded", function () {
   displayShifts();
 });
+// Script cho quản lý nhân viên
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("employee_form");
   const table = document
@@ -138,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const editBtn = document.querySelector(".btn_edit");
   const deleteBtn = document.querySelector(".btn_delete");
   let selectedRow = null;
+
+  // Hàm thêm nhân viên mới
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (selectedRow == null) {
@@ -160,6 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
       form.reset();
     }
   });
+
+  // Hàm sửa thông tin nhân viên
   window.editRow = function (button) {
     selectedRow = button.parentElement.parentElement;
     document.getElementById("manv").value = selectedRow.cells[0].innerHTML;
@@ -175,6 +188,8 @@ document.addEventListener("DOMContentLoaded", function () {
     editBtn.disabled = false;
     deleteBtn.disabled = false;
   };
+
+  // Hàm xóa nhân viên
   window.deleteRow = function (button) {
     if (confirm("Bạn có chắc muốn xóa nhân viên này?")) {
       const row = button.parentElement.parentElement;

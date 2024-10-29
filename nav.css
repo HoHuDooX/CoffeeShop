@@ -8,12 +8,13 @@
 :root {
   --bgc: #272725c8;
 }
+
 body {
   position: relative;
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(to bottom, rgb(89, 82, 69), rgb(248, 244, 209));
+  background: linear-gradient(to bottom, rgb(33, 76, 118), rgb(248, 244, 209));
 }
 .sidebar {
   position: fixed;
@@ -98,7 +99,7 @@ body {
   border-radius: 12px;
   border: none;
   outline: none;
-  background: linear-gradient(to right, #c7b7c07a, #423d07);
+  background: linear-gradient(to right, #c7b7c07a, #7a7973);
   padding-left: 50px;
   font-size: 18px;
   color: #1f1e25;
@@ -162,7 +163,7 @@ body {
   border-radius: 12px;
   text-align: center;
   transition: all 0.4s ease;
-  background: linear-gradient(to right, #c7b7c07a, #433f10);
+  background: linear-gradient(to right, #c7b7c07a, #7a7973);
   cursor: pointer;
 }
 
@@ -250,7 +251,7 @@ body {
 }
 
 .sidebar.active .profile_content .profile {
-  background: linear-gradient(to right, #9869127a, #969664);
+  background: linear-gradient(to right, #c7b7c07a, #7a7973);
 }
 .sidebar.active .profile #log_out {
   background: none;
