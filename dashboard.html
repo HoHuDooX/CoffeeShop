@@ -13,7 +13,7 @@
     <title>CoffeeShop - Thống Kê</title>
   </head>
   <body>
-    <div class="sidebar">
+     <div class="sidebar">
       <div class="logo_content">
         <div class="logo">
           <i class="bx bx-coffee"></i>
@@ -28,7 +28,14 @@
           <span class="tooltip">Search</span>
         </li>
         <li>
-          <a href="index.html">
+          <a
+            href="dashboard.html"
+            style="
+              color: #000;
+              font-weight: 600;
+              background: rgba(255, 255, 255, 0.25);
+            "
+          >
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Thống kê</span>
           </a>
@@ -55,6 +62,7 @@
           </a>
           <span class="tooltip">QL Ca làm</span>
         </li>
+
         <li>
           <a href="caidat.html">
             <i class="bx bx-cog"></i>
@@ -63,6 +71,7 @@
           <span class="tooltip">Cài đặt</span>
         </li>
       </ul>
+
       <div class="profile_content">
         <div class="profile">
           <div class="profile_details">
@@ -72,11 +81,14 @@
               <div class="job">Quản lí</div>
             </div>
           </div>
-          <i class="bx bx-log-out" id="log_out"></i>
+          <i
+            class="bx bx-log-out"
+            id="log_out"
+            onclick="window.location.href='index.html'"
+          ></i>
         </div>
       </div>
     </div>
-
     <div class="home_content_thongke">
       <div class="text">Thống Kê</div>
       
