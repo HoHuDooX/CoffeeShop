@@ -472,37 +472,3 @@ button:hover {
 .btn-delete-row:hover {
   background-color: #d32f2f; /* Hiệu ứng hover cho nút xóa */
 }
-
-/* Responsive cho màn hình nhỏ */
-@media (max-width: 480px) {
-  .shift-list table {
-    display: block;
-    overflow-x: auto;
-  }
-
-  .shift-list table thead {
-    display: none;
-  }
-
-  .shift-list tbody,
-  .shift-list tr {
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .shift-list td {
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    padding: 10px;
-    background: #f9f9f9;
-  }
-
-  .shift-list td::before {
-    content: attr(
-      data-label
-    ); /* Sử dụng thuộc tính data-label để hiển thị tên cột */
-    font-weight: bold;
-    margin-right: 10px; /* Khoảng cách giữa tên cột và giá trị */
-  }
-}
