@@ -244,3 +244,68 @@ body {
   width: calc(100% - 240px);
   left: 240px;
 }
+@media (max-width: 480px) {
+  .sidebar {
+    height: 8vh;
+    top: 91.5%;
+    left: 0;
+  }
+  .sidebar #btn {
+    display: none;
+  }
+  .sidebar ul li .bx-search {
+    display: none;
+  }
+  .sidebar ul li:first-child {
+    display: none;
+  }
+  .sidebar ul li .tooltip {
+    transform: translate(-110%, -180%);
+  }
+  .sidebar ul {
+    width: 100%;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .sidebar ul li {
+    height: 100%;
+    width: 12%;
+  }
+  .sidebar ul {
+    margin-top: 0;
+  }
+  .list_table {
+    padding: 0;
+  }
+
+  .sidebar .profile_content {
+    display: none;
+  }
+  .logo_content {
+    display: none;
+  }
+
+  /*  */
+  .home_content {
+    width: 100%;
+    left: 0;
+    height: 92vh;
+  }
+  .home_content_qlcalam {
+    width: 100%;
+    left: 0;
+    height: 92vh;
+  }
+  .home_content_thongke {
+    width: 100%;
+    left: 0;
+    height: 92vh;
+  }
+  .home_content_qlnhanvien {
+    width: 100%;
+    left: 0;
+    height: 92vh;
+  }
+}

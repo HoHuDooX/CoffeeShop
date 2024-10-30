@@ -392,6 +392,11 @@ button:hover {
     display: block;
     overflow-x: auto;
   }
+  .home_content_qlcalam {
+    width: 100%;
+    left: 0;
+    height: 92vh;
+  }
 
   .shift-list table thead {
     display: none;

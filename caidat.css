@@ -49,7 +49,7 @@
 
 #change-avatar-btn {
   padding: 8px;
-  background-color: #37a1f7;
+  background-color: #344f66;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
   color: white;
@@ -94,16 +94,36 @@
   margin-top: 2.5rem;
   padding: 10px;
   background-color: #52bf56;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form + button {
+  position: relative;
+  left: 30%;
+  width: 40%;
+  margin-top: 1.5rem;
+  padding: 10px;
+  background-color: #2873b5;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.account-info button:hover {
+.account-info button[type="submit"]:hover {
   background-color: #80e583;
   color: rgb(245, 241, 241);
 }
+form + button:hover {
+  background-color: #5596ce;
+}
+
 /*  */
 .security-settings {
   padding: 1rem;
@@ -124,7 +144,9 @@
   width: 80%;
   padding: 0.5rem;
   margin: 10px auto;
-  background-color: #2195f5;
+  background-color: #557188;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -221,5 +243,8 @@
 @media (max-width: 360px) {
   .security-settings {
     height: 18rem;
+  }
+  .account-info {
+    height: 42rem;
   }
 }
