@@ -156,10 +156,19 @@ button:hover {
   color: #1f1e25;
 }
 .chart-container {
+  margin-top: 3rem;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;
 }
+.chart-container .chart.chart1 {
+  width: 48%;
+}
+.chart-container .chart.chart2 {
+  width: 48%;
+}
+
 .chart {
   background: linear-gradient(
     to bottom right,
@@ -187,6 +196,12 @@ button:hover {
     width: 40%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
+  }
+  .chart-container .chart.chart1 {
+    width: 100%;
+  }
+  .chart-container .chart.chart2 {
+    width: 100%;
   }
 }
 @media screen and (max-width: 590px) {
