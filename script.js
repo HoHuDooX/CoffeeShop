@@ -14,3 +14,12 @@ document
         "Tên người dùng hoặc mật khẩu không đúng!";
     }
   });
+document
+  .getElementById("togglePassword")
+  .addEventListener("click", function () {
+    const passwordInput = document.getElementById("password");
+    const isPasswordHidden = passwordInput.getAttribute("type") === "password";
+    passwordInput.setAttribute("type", isPasswordHidden ? "text" : "password");
+    this.classList.toggle("fa-eye-slash", !isPasswordHidden);
+    this.classList.toggle("fa-eye", isPasswordHidden);
+  });
