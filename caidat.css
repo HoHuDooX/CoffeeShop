@@ -1,0 +1,225 @@
+/* Cai dat */
+.home_content {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 76px);
+  left: 76px;
+  transition: all 0.5s ease;
+  padding: 20px;
+  overflow-y: auto;
+  background: linear-gradient(to bottom, #eaf8ff, rgb(250, 249, 249));
+}
+.home_content .text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #1f1e25;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+.home_content .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.home_content .account {
+  width: 45%;
+}
+.home_content .else-setting {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+/* avatar */
+.avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#change-avatar-btn {
+  padding: 8px;
+  background-color: #37a1f7;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#change-avatar-btn:hover {
+  background-color: #5eb2f7;
+  color: rgb(255, 255, 255);
+}
+/*  */
+
+.account-info {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  height: 39rem;
+}
+.account-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.account-info form {
+  display: flex;
+  flex-direction: column;
+}
+.account-info label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.account-info input {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.account-info button[type="submit"] {
+  margin-top: 2.5rem;
+  padding: 10px;
+  background-color: #52bf56;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.account-info button:hover {
+  background-color: #80e583;
+  color: rgb(245, 241, 241);
+}
+/*  */
+.security-settings {
+  padding: 1rem;
+  background-color: #fdfeff;
+  border-radius: 0.8rem;
+  margin-top: 0;
+  width: 100%;
+  height: 13rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.security-settings h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.security-settings button {
+  display: block;
+  width: 80%;
+  padding: 0.5rem;
+  margin: 10px auto;
+  background-color: #2195f5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.security-settings button:hover {
+  background-color: #5eb2f7;
+  color: rgb(255, 255, 255);
+}
+/*  */
+.notification-settings {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  height: 11rem;
+}
+.notification-settings h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.notification-settings label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.notification-settings input[type="checkbox"] {
+  margin-right: 10px;
+}
+/*  */
+.appearance-settings {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  height: 13rem;
+}
+.appearance-settings h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.appearance-settings button {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f8f8f8;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.appearance-settings button:hover {
+  background-color: #ffffff;
+}
+.appearance-settings .dark:hover {
+  background-color: #191919c2;
+}
+.appearance-settings label {
+  font-size: 16px;
+  display: block;
+  margin-top: 15px;
+}
+
+.appearance-settings .dark {
+  background-color: #434242c2;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .home_content .account {
+    width: 90%;
+  }
+  .home_content .else-setting {
+    margin-top: 1rem;
+    width: 90%;
+  }
+  .security-settings {
+    height: 16rem;
+  }
+  .notification-settings {
+    height: 16rem;
+  }
+  .appearance-settings {
+    height: 16rem;
+  }
+}
+@media (max-width: 360px) {
+  .security-settings {
+    height: 18rem;
+  }
+}

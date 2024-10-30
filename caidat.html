@@ -30,7 +30,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="menu_dashboard.css" />
+    <link rel="stylesheet" href="caidat.css" />
     <link rel="stylesheet" href="nav.css" />
 
     <title>CoffeeShop</title>
@@ -112,5 +112,95 @@
       </div>
     </div>
     <!--  -->
+    <div class="home_content">
+      <div class="text">Cài Đặt</div>
+      <div class="content">
+        <div class="account">
+          <section class="account-info">
+            <h2>Thông tin tài khoản</h2>
+
+            <!-- Khung ảnh đại diện -->
+            <div class="avatar-wrapper">
+              <img src="./img/profile.jpg" alt="Avatar" id="avatar-img" />
+              <input
+                type="file"
+                id="avatar-input"
+                accept="image/*"
+                style="display: none"
+              />
+              <button type="button" id="change-avatar-btn">
+                Thay đổi ảnh đại diện
+              </button>
+            </div>
+
+            <!-- Thông tin tài khoản -->
+            <form>
+              <label for="name">Tên:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nhập tên của bạn"
+              />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Nhập email của bạn"
+              />
+
+              <label for="password">Mật khẩu:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="********"
+              />
+
+              <button type="submit">Lưu thay đổi</button>
+            </form>
+          </section>
+        </div>
+
+        <div class="else-setting">
+          <section class="security-settings">
+            <h2>Cài đặt bảo mật</h2>
+            <button>Thay đổi mật khẩu</button>
+            <button>Kích hoạt xác thực hai lớp</button>
+            <button>Xem lịch sử đăng nhập</button>
+          </section>
+          <section class="notification-settings">
+            <h2>Thông báo</h2>
+            <label>
+              <input type="checkbox" name="email_notifications" />
+              Nhận thông báo qua email
+            </label>
+            <label>
+              <input type="checkbox" name="sms_notifications" />
+              Nhận thông báo qua SMS
+            </label>
+            <label>
+              <input type="checkbox" name="app_notifications" />
+              Nhận thông báo trên ứng dụng
+            </label>
+          </section>
+          <section class="appearance-settings">
+            <h2>Giao diện</h2>
+            <button>Chế độ sáng</button>
+            <button class="dark">Chế độ tối</button>
+            <label for="theme-color">Màu sắc chủ đạo:</label>
+            <input
+              type="color"
+              id="theme-color"
+              name="theme-color"
+              value="#2196F3"
+            />
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="caidat.js"></script>
   </body>
 </html>

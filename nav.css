@@ -231,7 +231,6 @@ body {
   width: calc(100% - 240px);
   left: 240px;
 }
-
 .sidebar.active .profile_content .profile {
   background: linear-gradient(to right, #7fc8e27a, #ebd6eb);
 }
