@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="menu_dashboard.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>CoffeeShop</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bx-coffee"></i>
+          <div class="logo_name">CoffeeShop</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a
+            href="employee_menu.html"
+            style="
+              color: #000;
+              font-weight: 600;
+              background: rgba(255, 255, 255, 0.25);
+            "
+          >
+            <i class="bx bx-food-menu"></i>
+            <span class="links_name">QL Thực đơn</span>
+          </a>
+          <span class="tooltip">QL Thực đơn</span>
+        </li>
+
+        <li>
+          <a href="employee_calam.html">
+            <i class="bx bx-task"></i>
+            <span class="links_name">QL Ca làm</span>
+          </a>
+          <span class="tooltip">QL Ca làm</span>
+        </li>
+        <li>
+          <a href="employee_caidat.html">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Cài Đặt</span>
+          </a>
+          <span class="tooltip">Cài đặt</span>
+        </li>
+      </ul>
+
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="./img/profile.jpg" alt="" />
+            <div class="name_job">
+              <div class="name">Username</div>
+              <div class="job">Nhân Viên</div>
+            </div>
+          </div>
+          <i
+            class="bx bx-log-out"
+            id="log_out"
+            onclick="window.location.href='index.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="home_content">
+      <div class="text">Quản lí Thực đơn</div>
+
+      <!-- Form thông tin chi tiết -->
+
+      <!-- Bảng danh sách -->
+      <div class="list-table">
+        <h3>Danh sách món</h3>
+        <div class="filter-group">
+          <input
+            type="text"
+            id="filterMa"
+            placeholder="Lọc theo mã món"
+            onkeyup="filterTable()"
+          />
+          <input
+            type="text"
+            id="filterTen"
+            placeholder="Lọc theo tên món"
+            onkeyup="filterTable()"
+          />
+          <input
+            type="number"
+            id="filterGia"
+            placeholder="Lọc theo đơn giá"
+            onkeyup="filterTable()"
+          />
+          <select id="filterDanhMuc" onchange="filterTable()">
+            <option value="">Tất cả danh mục</option>
+            <option value="cafe">Cà phê</option>
+            <option value="tra">Trà</option>
+            <option value="banh">Bánh</option>
+            <option value="nuocep">Nước ép</option>
+          </select>
+        </div>
+        <table id="menuTable">
+          <thead>
+            <tr>
+              <th>Mã món</th>
+              <th>Tên món</th>
+              <th>Đơn giá</th>
+              <th>Danh mục</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dữ liệu mẫu -->
+            <tr>
+              <td>CF001</td>
+              <td>Cà phê đen</td>
+              <td>25000</td>
+              <td>Cà phê</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="menu_dashboard.js"></script>
+  </body>
+</html>

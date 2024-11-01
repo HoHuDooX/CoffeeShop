@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nav.css" />
+    <title>CoffeeShop</title>
+
+    <link rel="stylesheet" href="./calam_nhanvien.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bx-coffee"></i>
+          <div class="logo_name">CoffeeShop</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a
+            href="employee_menu.html"
+          
+          >
+            <i class="bx bx-food-menu"></i>
+            <span class="links_name">QL Thực đơn</span>
+          </a>
+          <span class="tooltip">QL Thực đơn</span>
+        </li>
+
+        <li>
+          <a href="employee_calam.html"   style="
+          color: #000;
+          font-weight: 600;
+          background: rgba(255, 255, 255, 0.25);
+        ">
+            <i class="bx bx-task"></i>
+            <span class="links_name">QL Ca làm</span>
+          </a>
+          <span class="tooltip">QL Ca làm</span>
+        </li>
+        <li>
+          <a href="employee_caidat.html" >
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Cài Đặt</span>
+          </a>
+          <span class="tooltip">Cài đặt</span>
+        </li>
+      </ul>
+
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="./img/profile.jpg" alt="" />
+            <div class="name_job">
+              <div class="name">Username</div>
+              <div class="job">Nhân Viên</div>
+            </div>
+          </div>
+          <i
+            class="bx bx-log-out"
+            id="log_out"
+            onclick="window.location.href='index.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <div class="home_content_qlcalam">
+      <div class="text">Quản lí Ca Làm</div>
+      <div class="shift-management">
+        <!-- Form nhập thông tin ca làm -->
+          <!-- Phần filter và bảng -->
+          <div class="shift-list">
+            <div class="list-header">
+              <h2>Danh sách ca làm</h2>
+              <div class="filter-section">
+                <div class="form-group">
+                  <select id="monthFilter" onchange="filterShifts()">
+                    <option value="">Tất cả tháng</option>
+                    <option value="1">Tháng 1</option>
+                    <option value="2">Tháng 2</option>
+                    <option value="3">Tháng 3</option>
+                    <option value="4">Tháng 4</option>
+                    <option value="5">Tháng 5</option>
+                    <option value="6">Tháng 6</option>
+                    <option value="7">Tháng 7</option>
+                    <option value="8">Tháng 8</option>
+                    <option value="9">Tháng 9</option>
+                    <option value="10">Tháng 10</option>
+                    <option value="11">Tháng 11</option>
+                    <option value="12">Tháng 12</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select id="shiftFilter" onchange="filterShifts()">
+                    <option value="">Tất cả ca</option>
+                    <option value="Ca sáng">Ca sáng</option>
+                    <option value="Ca chiều">Ca chiều</option>
+                    <option value="Ca tối">Ca tối</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Mã ca làm</th>
+                  <th>Tên ca</th>
+                  <th>Mã NV</th>
+                  <th>Tên NV</th>
+                  <th>Ngày làm</th>
+                </tr>
+              </thead>
+              <tbody id="shiftTableBody">
+                <!-- Dữ liệu sẽ được thêm bởi JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./employee_calam.js"></script>
+  </body>
+</html>

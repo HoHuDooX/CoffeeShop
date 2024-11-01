@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="caidat.css" />
+    <link rel="stylesheet" href="nav.css" />
+
+    <title>CoffeeShop</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bx-coffee"></i>
+          <div class="logo_name">CoffeeShop</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="employee_menu.html">
+            <i class="bx bx-food-menu"></i>
+            <span class="links_name">QL Thực đơn</span>
+          </a>
+          <span class="tooltip">QL Thực đơn</span>
+        </li>
+
+        <li>
+          <a href="employee_calam.html">
+            <i class="bx bx-task"></i>
+            <span class="links_name">QL Ca làm</span>
+          </a>
+          <span class="tooltip">QL Ca làm</span>
+        </li>
+
+        <li>
+          <a
+            href="employee_caidat.html"
+            style="
+              color: #000;
+              font-weight: 600;
+              background: rgba(255, 255, 255, 0.25);
+            "
+          >
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Cài Đặt</span>
+          </a>
+          <span class="tooltip">Cài đặt</span>
+        </li>
+      </ul>
+
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="./img/profile.jpg" alt="" />
+            <div class="name_job">
+              <div class="name">Username</div>
+              <div class="job">Nhân Viên</div>
+            </div>
+          </div>
+          <i
+            class="bx bx-log-out"
+            id="log_out"
+            onclick="window.location.href='index.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="home_content">
+      <div class="text">Cài Đặt</div>
+      <div class="content">
+        <div class="account">
+          <section class="account-info">
+            <h2>Thông tin tài khoản</h2>
+
+            <!-- Khung ảnh đại diện -->
+            <div class="avatar-wrapper">
+              <img src="./img/profile.jpg" alt="Avatar" id="avatar-img" />
+              <input
+                type="file"
+                id="avatar-input"
+                accept="image/*"
+                style="display: none"
+              />
+              <button type="button" id="change-avatar-btn">
+                Thay đổi ảnh đại diện
+              </button>
+            </div>
+
+            <!-- Thông tin tài khoản -->
+            <form>
+              <label for="name">Tên:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nhập tên của bạn"
+              />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Nhập email của bạn"
+              />
+
+              <label for="password">Mật khẩu:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="********"
+              />
+
+              <button type="submit">Lưu thay đổi</button>
+            </form>
+            <button onclick="window.location.href='index.html'" type="button">
+              Đăng Xuất
+            </button>
+          </section>
+        </div>
+
+        <div class="else-setting">
+          <section class="security-settings">
+            <h2>Cài đặt bảo mật</h2>
+            <button>Thay đổi mật khẩu</button>
+            <button>Kích hoạt xác thực hai lớp</button>
+            <button>Xem lịch sử đăng nhập</button>
+          </section>
+          <section class="notification-settings">
+            <h2>Thông báo</h2>
+            <label>
+              <input type="checkbox" name="email_notifications" />
+              Nhận thông báo qua email
+            </label>
+            <label>
+              <input type="checkbox" name="sms_notifications" />
+              Nhận thông báo qua SMS
+            </label>
+            <label>
+              <input type="checkbox" name="app_notifications" />
+              Nhận thông báo trên ứng dụng
+            </label>
+          </section>
+          <section class="appearance-settings">
+            <h2>Giao diện</h2>
+            <button>Chế độ sáng</button>
+            <button class="dark">Chế độ tối</button>
+            <label for="theme-color">Màu sắc chủ đạo:</label>
+            <input
+              type="color"
+              id="theme-color"
+              name="theme-color"
+              value="#2196F3"
+            />
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="caidat.js"></script>
+  </body>
+</html>
