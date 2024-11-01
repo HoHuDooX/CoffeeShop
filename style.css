@@ -68,11 +68,21 @@ input[type="password"] {
   color: var(--white-color);
 }
 label {
-  display: block;
+  display: inline;
   font-size: 1.3rem;
   color: var(--white-color);
   margin-left: 2rem;
   font-weight: 400;
+}
+.role {
+  margin-top: 0.6rem;
+}
+#role {
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+  color: #905929;
+  background-color: rgb(255, 248, 210);
+  border-radius: 0.7rem;
 }
 .button {
   display: flex;
@@ -87,7 +97,7 @@ label {
     rgb(126, 108, 75),
     rgba(255, 185, 55, 0.339)
   );
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-left: 1.2rem;
   margin-bottom: 2rem;
   width: 100%;

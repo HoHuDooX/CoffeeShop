@@ -69,10 +69,10 @@
       <div class="form">
         <form id="loginForm">
           <div class="box">
-            <label for="maquanli">Mã quản lý</label>
+            <label for="username">Tên đăng nhập</label>
             <input
               type="text"
-              id="maquanli"
+              id="username"
               placeholder="4-20 ký tự,a-z,A-Z,0-9"
               required
               autocomplete="off"
@@ -91,6 +91,13 @@
           <div class="check">
             <input type="checkbox" name="" id="" /> <span>Lưu mật khẩu</span>
             <a href="#">Quên mật khẩu?</a>
+          </div>
+          <div class="role">
+            <label for="role">Vai Trò:</label>
+            <select id="role" name="role">
+              <option value="manager">Quản Lý</option>
+              <option value="employee">Nhân Viên</option>
+            </select>
           </div>
           <div class="button"><button type="submit">Đăng Nhập</button></div>
           <p id="message"></p>
